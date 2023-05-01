@@ -33,7 +33,9 @@ const NewsCard = ({ news }) => {
         </Card.Text>
       </Card.Body>
       <Card.Footer className="text-muted d-flex align-items-center">
-        <Rating style={{ maxWidth: 150 }} value={rating} readOnly />
+        <Rating
+          style={{ maxWidth: 150 }}
+          value={Math.round(rating?.number || 0)} readOnly />
         <div className='flex-grow-1'>
           <span>{rating?.number}</span>
         </div>
